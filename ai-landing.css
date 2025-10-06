@@ -1,0 +1,415 @@
+/* Base Styles */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+body { 
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6; 
+    color: #ffffff; 
+    background: #0f0f0f; 
+    overflow-x: hidden;
+}
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* Header */
+.header { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background: rgba(15,15,15,0.95); 
+    backdrop-filter: blur(10px); 
+    z-index: 1000; 
+}
+.navbar { 
+    padding: 1rem 0; 
+}
+.nav-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.logo h2 { 
+    color: #6a0dad; 
+    font-weight: 700; 
+}
+.nav-menu { 
+    display: flex; 
+    list-style: none; 
+    gap: 2rem; 
+}
+.nav-menu a { 
+    color: #ffffff; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+.nav-menu a:hover { 
+    color: #6a0dad; 
+}
+.hamburger { 
+    display: none; 
+    flex-direction: column; 
+    cursor: pointer; 
+}
+.hamburger span { 
+    width: 25px; 
+    height: 3px; 
+    background: #ffffff; 
+    margin: 3px 0; 
+    transition: 0.3s; 
+}
+
+/* Hero Section */
+.hero { 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    position: relative; 
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f0f 100%);
+}
+.particles { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 1; 
+}
+.hero-overlay { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.3); 
+    z-index: 2; 
+}
+.hero-content { 
+    position: relative; 
+    z-index: 3; 
+}
+.hero-content h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 1rem; 
+    font-weight: 700; 
+    color: #ffffff; 
+}
+.subtitle { 
+    font-size: 1.3rem; 
+    margin-bottom: 2rem; 
+    opacity: 0.95; 
+    font-weight: 300; 
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.typing-effect { 
+    border-right: 2px solid #6a0dad; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing 4s steps(50) forwards, blink 0.75s infinite; 
+}
+@keyframes typing { 
+    from { width: 0; } 
+    to { width: 100%; } 
+}
+@keyframes blink { 
+    0%,50% { border-color: transparent; } 
+    51%,100% { border-color: #6a0dad; } 
+}
+.hero-cta { 
+    display: flex; 
+    gap: 1rem; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+.cta-button { 
+    padding: 15px 30px; 
+    text-decoration: none; 
+    border-radius: 50px; 
+    font-weight: 600; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+.cta-button.primary { 
+    background: linear-gradient(45deg, #6a0dad, #8b5cf6); 
+    color: #ffffff; 
+}
+.cta-button.secondary { 
+    background: transparent; 
+    color: #6a0dad; 
+    border: 2px solid #6a0dad; 
+}
+.cta-button:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgba(106,13,173,0.3); 
+}
+
+/* General Animations */
+@keyframes fadeInUp { 
+    from { opacity: 0; transform: translateY(30px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+@keyframes slideLeft { 
+    from { opacity: 0; transform: translateX(-50px); } 
+    to { opacity: 1; transform: translateX(0); } 
+}
+.animate-section { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: all 0.8s ease; 
+}
+.animate-section.animate { 
+    animation: fadeInUp 0.8s ease forwards; 
+}
+.slide-left.animate { 
+    animation: slideLeft 0.8s ease forwards; 
+}
+.section-title { 
+    text-align: center; 
+    font-size: 2.8rem; 
+    margin-bottom: 3rem; 
+    color: #6a0dad; 
+    font-weight: 600; 
+}
+
+/* Features Section */
+.features { 
+    padding: 100px 0; 
+    background: rgba(26,26,46,0.5); 
+}
+.features-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2rem; 
+}
+.feature-card { 
+    background: rgba(15,15,15,0.8); 
+    padding: 2rem; 
+    border-radius: 15px; 
+    text-align: center; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+.feature-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(106,13,173,0.2); 
+}
+.feature-card i { 
+    font-size: 3rem; 
+    color: #6a0dad; 
+    margin-bottom: 1rem; 
+}
+.feature-card h3 { 
+    margin-bottom: 1rem; 
+    color: #ffffff; 
+}
+.feature-card p { 
+    opacity: 0.9; 
+}
+
+/* About Section */
+.about { 
+    padding: 100px 0; 
+    text-align: center; 
+}
+.about-text { 
+    max-width: 800px; 
+    margin: 0 auto 2rem; 
+    font-size: 1.1rem; 
+    opacity: 0.95; 
+}
+.about-image img { 
+    width: 100%; 
+    max-width: 400px; 
+    border-radius: 10px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
+
+/* Call to Action Section */
+.cta-section { 
+    padding: 100px 0; 
+    text-align: center; 
+    background: linear-gradient(135deg, #1a1a2e, #16213e); 
+}
+.cta-section p { 
+    margin-bottom: 2rem; 
+    font-size: 1.2rem; 
+    opacity: 0.9; 
+}
+
+/* Footer Section */
+.footer { 
+    text-align: center; 
+    padding: 2rem 0; 
+    background: rgba(15,15,15,0.8); 
+}
+.social-links { 
+    margin-top: 1rem; 
+    display: flex; 
+    justify-content: center; 
+    gap: 1rem; 
+}
+.social-links a { 
+    color: #ffffff; 
+    font-size: 1.5rem; 
+    transition: color 0.3s; 
+}
+.social-links a:hover { 
+    color: #6a0dad; 
+}
+
+/* Particles (CSS for dots) */
+.particles::before, 
+.particles::after { 
+    content: ''; 
+    position: absolute; 
+    width: 2px; 
+    height: 2px; 
+    background: #6a0dad; 
+    border-radius: 50%; 
+    animation: float 6s infinite linear; 
+}
+.particles::before { 
+    top: 20%; 
+    left: 10%; 
+    animation-delay: 0s; 
+}
+.particles::after { 
+    top: 80%; 
+    right: 20%; 
+    animation-delay: 3s; 
+}
+@keyframes float { 
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; } 
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; } 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger { 
+        display: flex; 
+    }
+    .nav-menu { 
+        position: fixed; 
+        left: -100%; 
+        top: 70px; 
+        flex-direction: column; 
+        background: rgba(15,15,15,0.95); 
+        width: 100%; 
+        transition: left 0.3s; 
+        padding: 2rem; 
+    }
+    .nav-menu.active { 
+        left: 0; 
+    }
+    .hero-content h1 { 
+        font-size: 2.5rem; 
+    }
+    .hero-cta { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .features-grid { 
+        grid-template-columns: 1fr; 
+    }
+}
+@media (max-width: 768px) {
+    .about-image img {
+        max-width: 300px;
+    }
+}
+/* Email Modal Styling (Reuse dari style.css jika ada) */
+#emailModal .modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+#emailModal .modal-content input,
+#emailModal .modal-content textarea {
+    padding: 12px;
+    border: 1px solid #6a0dad;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+    font-family: inherit;
+}
+#emailModal .modal-content input::placeholder,
+#emailModal .modal-content textarea::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+#emailModal .modal-content button[type="submit"] {
+    align-self: center;
+    margin-top: 1rem;
+}
+#formStatus {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+#formStatus.success { color: #4ade80; }
+#formStatus.error { color: #ef4444; }
+
+/* CTA Section - Fixed untuk Clickability */
+.cta-section { 
+    padding: 100px 0; 
+    text-align: center; 
+    background: linear-gradient(135deg, #1a1a2e, #16213e); 
+}
+.cta-section p { 
+    margin-bottom: 2rem; 
+    font-size: 1.2rem; 
+    opacity: 0.9; 
+}
+
+/* Pastikan tombol CTA clickable */
+.cta-button {
+    padding: 15px 30px; 
+    text-decoration: none; 
+    border-radius: 50px; 
+    font-weight: 600; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    display: inline-block; /* Explicit untuk click area */
+    cursor: pointer; /* Kursor pointer saat hover */
+    pointer-events: auto; /* Pastikan tidak ada block dari animasi */
+    z-index: 10; /* Tinggi agar tidak overlap */
+    position: relative; /* Untuk efek hover */
+}
+
+.cta-button.primary { 
+    background: linear-gradient(45deg, #6a0dad, #8b5cf6); 
+    color: #ffffff; 
+}
+.cta-button.secondary { 
+    background: transparent; 
+    color: #6a0dad; 
+    border: 2px solid #6a0dad; 
+}
+.cta-button:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgba(106,13,173,0.3); 
+    text-decoration: none; /* Hindari underline saat hover */
+    color: inherit; /* Warna tetap */
+}
+
+/* Responsif - Pastikan di mobile clickable */
+@media (max-width: 768px) {
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+        margin: 5px; /* Spacing di mobile */
+    }
+    .hero-cta, .cta-section .cta-button { /* Jika ada di hero juga */
+        flex-direction: column;
+        align-items: center;
+    }
+}

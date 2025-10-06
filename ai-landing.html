@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwiky Candra - Gen AI Engineer</title>
+    <link rel="stylesheet" href="ai-landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>DC AI</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">Unlock the Future with AI</h1>
+            <p class="subtitle typing-effect" id="typing-text">I'm Dwiky Candra, Gen AI Engineer from IDCAMP Bootcamp.
+                Building intelligent solutions at President University.</p>
+            <div class="hero-cta">
+                <a href="#features" class="cta-button primary">Discover My Skills</a>
+                <a href="#contact" class="cta-button secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (Skills/Experience) -->
+    <section id="features" class="features animate-section">
+        <div class="container">
+            <h2 class="section-title">What I Bring to AI</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Generative AI Expertise</h3>
+                    <p>Hands-on with Gen AI models from IDCAMP Bootcamp by Indosat Oreedo. Creating text, images, and
+                        code with tools like GPT and Stable Diffusion.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Full-Stack Development</h3>
+                    <p>Building responsive web apps with React, Node.js, and AI integrations. Passionate about seamless
+                        user experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Machine Learning</h3>
+                    <p>Training models for prediction and automation. Experienced in Python, TensorFlow, and data-driven
+                        insights.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Collaborative Projects</h3>
+                    <p>Worked on team-based AI challenges during bootcamp. Ready to collaborate on innovative tech
+                        solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about animate-section">
+        <div class="container">
+            <h2 class="section-title">My AI Journey</h2>
+            <p class="about-text">As an Information Technology student at President University, I've dived deep into AI
+                through the IDCAMP Gen AI Engineer program. From learning advanced neural networks to deploying
+                real-world apps, I'm committed to pushing the boundaries of technology. Let's connect to build something
+                extraordinary!</p>
+            <div class="about-image">
+                <img src="brain-8530786.jpg" alt="AI Journey Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <!-- Call to Action Section - Fixed -->
+    <section id="contact" class="cta-section animate-section">
+        <div class="container">
+            <h2 class="section-title">Ready to Collaborate?</h2>
+            <p>Whether it's an AI project, web dev, or internship opportunity, I'm here to help.</p>
+            <!-- Tombol Send Email - Fixed dengan email valid dan parameter -->
+                 <a href="mailto:dwikycandra005@gmail.com?subject=Collaboration%20Request%20-%20Dwiky%20Candra%20AI%20Portfolio&body=Hi%20Dwiky,%0A%0AI%20am%20interested%20in%20collaborating%20on%20an%20AI%20project.%20Here%27s%20a%20brief%20description%20of%20my%20idea:%0A%0A%0AWhat%20do%20you%20think?%0A%0ABest%20regards,%0A%5BYour%20Name%5D%0A%5BYour%20Email%5D" 
+        class="cta-button primary" 
+        id="sendEmailBtn"
+        onclick="if(!window.location.href.includes('mailto')) { window.open('https://mail.google.com/mail/?view=cm&to=dwikycandra005@gmail.com&su=Collaboration Request - Dwiky Candra AI Portfolio&body=Hi Dwiky,%0AI am interested in collaborating...'); return false; }"  
+        target="_blank">Send Email</a>
+     
+            <a href="index.html" class="cta-button secondary">View Full Portfolio</a>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2023 Dwiky Candra. Powered by AI Passion.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/dwiky-candra" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/dwikycandra" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/dwikycandra" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <!-- Email Form Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEmailModal">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="userName" placeholder="Your Name" required>
+                <input type="email" id="userEmail" placeholder="Your Email" required>
+                <textarea id="userMessage" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-button primary">Send Message</button>
+            </form>
+            <p id="formStatus"></p>
+        </div>
+    </div>
+    <script src="ai-landing.js"></script>
+</body>
+
+</html>

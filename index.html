@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwiky Candra - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tambahkan Orbitron font di sini (selain Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Spinner (sama seperti sebelumnya) -->
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Header Section - Updated -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Dwiky.dev</h2> <!-- Diubah dari "DC Portfolio" jadi "Dwiky.dev" -->
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">Hello, I'm <span class="accent">Dwiky Candra</span></h1>
+            <p class="subtitle typing-effect" id="typing-text">An Information Technology Student at President University with Passion in Technology.</p>
+            <a href="#projects" class="cta-button fade-in-delay-2">View Portfolio</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about animate-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a dedicated Information Technology student at President University, passionate about leveraging technology to solve real-world problems. I've participated in the IDCAMP (Indosat Oreedo) Bootcamp in the Gen AI Engineer class, where I gained hands-on experience in Generative AI, machine learning, and innovative digital solutions. I enjoy creating user-friendly web applications and exploring emerging tech trends.</p>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fas fa-code"></i>
+                                <h4>Web Development</h4>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 90%;"></div>
+                                </div>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-brain"></i>
+                                <h4>Generative AI</h4>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%;"></div>
+                                </div>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-paint-brush"></i>
+                                <h4>UI/UX Design</h4>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 80%;"></div>
+                                </div>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-database"></i>
+                                <h4>Backend & ML</h4>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%;"></div>
+                                </div>
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="wujudasliadmin.jpeg" alt="Profile Photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+<section id="projects" class="projects animate-section">
+    <div class="container">
+        <h2 class="section-title">Portfolio Projects</h2>
+        <div class="projects-grid">
+            <!-- Project Card 1: E-Commerce Website (Under Maintenance) -->
+            <div class="project-card">
+                <img src="ecommerce.png" alt="E-Commerce Website">
+                <div class="project-info">
+                    <h3>E-Commerce Website</h3>
+                    <p>An online shopping site with integrated payment features and responsive design.</p>
+                    <p class="maintenance-status">Under Maintenance</p>
+                </div>
+            </div>
+            <!-- Project Card 2: Fitness Tracking App (Under Maintenance) -->
+            <div class="project-card">
+                <img src="fitness-tracker.jpeg" alt="Fitness Tracking App">
+                <div class="project-info">
+                    <h3>Fitness Tracking App</h3>
+                    <p>A mobile app for health tracking with minimalist design and data visualization.</p>
+                    <p class="maintenance-status">Under Maintenance</p>
+                </div>
+            </div>
+            <!-- Project Card 3: AI-Powered Landing Page (Tetap Normal) -->
+            <div class="project-card" data-modal="modal3">
+                <img src="brain-8530786.jpg" alt="AI Powered Landing Page">
+                <div class="project-info">
+                    <h3>AI-Powered Landing Page</h3>
+                    <p>A futuristic AI-themed landing page inspired by Rewind.ai, showcasing Gen AI skills from IDCAMP Bootcamp.</p>
+                    <a href="ai-landing.html" class="project-link" target="_blank">View Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact animate-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>Let's collaborate! Send me a message via email or social media.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>dwikycandra005@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <p>linkedin.com/in/dwiky-candra</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <p>github.com/dwikycandra</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Dwiky Candra's Portfolio. Made with ❤️</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/dwiky-candra" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/dwikycandra" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/dwikycandra" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- Modals for Project Details -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>E-Commerce Website</h2>
+            <p>Built with React and Stripe integration. Features include user authentication, cart management, and admin dashboard.</p>
+            <a href="https://github.com/dwikycandra/ecommerce" target="_blank" class="modal-link">View on GitHub</a>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Fitness Tracking App</h2>
+            <p>A React Native app for tracking workouts and nutrition. Includes charts and goal setting.</p>
+            <a href="https://github.com/dwikycandra/fitness-app" target="_blank" class="modal-link">View on GitHub</a>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>AI-Powered Landing Page</h2>
+            <p>This landing page demonstrates my skills in creating modern AI-focused websites. Inspired by Rewind.ai, it includes dynamic particle backgrounds and feature cards for Gen AI expertise.</p>
+            <a href="ai-landing.html" target="_blank" class="modal-link">View Live Demo</a>
+            <a href="https://github.com/dwikycandra/ai-landing" target="_blank" class="modal-link secondary">View on GitHub</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
