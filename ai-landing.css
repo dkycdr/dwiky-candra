@@ -18,29 +18,61 @@ body {
 }
 
 /* Header */
-.header { 
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    background: rgba(15,15,15,0.95); 
-    backdrop-filter: blur(10px); 
-    z-index: 1000; 
+/* Header - Updated untuk Logo Keren */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: background 0.3s;
 }
-.navbar { 
-    padding: 1rem 0; 
+
+.navbar {
+    padding: 1rem 0;
 }
-.nav-container { 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.logo h2 { 
-    color: #6a0dad; 
-    font-weight: 700; 
+
+.logo h2 {
+    /* Font baru: Orbitron untuk tampilan futuristik */
+    font-family: 'Orbitron', monospace; /* Ganti dari Poppins */
+    font-weight: 900; /* Bold untuk impact */
+    font-size: 1.8rem; /* Sedikit lebih besar agar menonjol */
+    margin: 0;
+    
+    /* Gradient text untuk efek keren (ungu ke biru) */
+    background: linear-gradient(45deg, #6a0dad, #8b5cf6, #06b6d4); /* Warna tema AI */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Glow effect dengan text-shadow */
+    text-shadow: 
+        0 0 10px rgba(106, 13, 173, 0.5), /* Glow ungu */
+        0 0 20px rgba(139, 92, 246, 0.3); /* Glow biru ringan */
+    
+    /* Transisi untuk hover */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
+
+.logo h2:hover {
+    /* Efek hover: Scale dan glow lebih kuat */
+    transform: scale(1.05) rotate(1deg); /* Ringan, menarik */
+    text-shadow: 
+        0 0 15px rgba(106, 13, 173, 0.7),
+        0 0 30px rgba(139, 92, 246, 0.5),
+        0 0 5px rgba(6, 182, 212, 0.3); /* Tambah cyan untuk variasi */
+}
+
 .nav-menu { 
     display: flex; 
     list-style: none; 
@@ -413,3 +445,4 @@ body {
         align-items: center;
     }
 }
+
