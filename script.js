@@ -1,4 +1,3 @@
-// Hide Loader after page load
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
     if (loader) {
@@ -6,12 +5,11 @@ window.addEventListener('load', () => {
             loader.style.opacity = '0';
             setTimeout(() => {
                 loader.style.display = 'none';
-            }, 500); // Fade out duration
-        }, 2000); // Delay before starting fade out
+            }, 500); 
+        }, 2000);
     }
 });
 
-// Typing Effect for Hero Subtitle
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
@@ -21,13 +19,12 @@ function typeWriter(element, text, speed = 100) {
             i++;
             setTimeout(type, speed);
         } else {
-            element.style.borderRight = 'none'; // Remove cursor after typing
+            element.style.borderRight = 'none';
         }
     }
     type();
 }
 
-// Initialize typing effect after DOM load
 document.addEventListener('DOMContentLoaded', () => {
     const typingText = document.getElementById('typing-text');
     if (typingText) {
@@ -35,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -43,13 +39,11 @@ if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
-        // Animate hamburger lines
         const spans = hamburger.querySelectorAll('span');
         spans.forEach(span => span.classList.toggle('active'));
     });
 }
 
-// Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -63,7 +57,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Close mobile menu on link click
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         if (hamburger && navMenu) {
@@ -75,7 +68,6 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// Scroll Animations using Intersection Observer
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -89,12 +81,10 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe sections for animation
 document.querySelectorAll('.animate-section').forEach(section => {
     observer.observe(section);
 });
 
-// Stagger animation for skill cards and project cards
 const animateCards = (selector, delayStep = 0.2) => {
     const cards = document.querySelectorAll(selector);
     cards.forEach((card, index) => {
@@ -108,21 +98,18 @@ const animateCards = (selector, delayStep = 0.2) => {
     });
 };
 
-// Trigger stagger animation when sections become visible
 document.querySelectorAll('.animate-section').forEach(section => {
     const sectionObserverCallback = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Stagger for skills in about section
                 if (entry.target.id === 'about') {
                     setTimeout(() => animateCards('.skill-card', 0.3), 200);
                 }
-                // Stagger for projects in projects section
                 else if (entry.target.id === 'projects') {
                     setTimeout(() => animateCards('.project-card', 0.2), 200);
                 }
                 entry.target.classList.add('animate');
-                sectionObserver.unobserve(entry.target); // Animate only once
+                sectionObserver.unobserve(entry.target);
             }
         });
     };
@@ -130,7 +117,6 @@ document.querySelectorAll('.animate-section').forEach(section => {
     sectionObserver.observe(section);
 });
 
-// Modal for Projects (Handles external links and internal modals)
 const modals = document.querySelectorAll('.modal');
 const projectLinks = document.querySelectorAll('.project-link');
 
@@ -138,14 +124,12 @@ projectLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
         
-        // If the link has an external href (not "#"), open it in a new tab
         if (href && href !== '#') {
             e.preventDefault();
             window.open(href, '_blank');
-            return; // Skip modal logic
+            return; 
         }
         
-        // If href="#", open the modal as usual
         e.preventDefault();
         const projectCard = link.closest('.project-card');
         if (projectCard) {
@@ -153,13 +137,12 @@ projectLinks.forEach(link => {
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                document.body.style.overflow = 'hidden';
             }
         }
     });
 });
 
-// Close modal
 modals.forEach(modal => {
     const closeBtn = modal.querySelector('.close');
     if (closeBtn) {
@@ -169,14 +152,13 @@ modals.forEach(modal => {
         });
     }
     modal.addEventListener('click', (e) => {
-        if (e.target === modal) { // Close if clicked outside modal content
+        if (e.target === modal) { 
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
     });
 });
 
-// Subtle Parallax for hero background
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroBg = document.querySelector('.hero-bg');
@@ -185,20 +167,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Progress bars animation when scrolling to skills section
 const progressObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const progresses = entry.target.querySelectorAll('.progress');
             progresses.forEach(progress => {
-                // Re-apply width to trigger CSS animation
                 progress.style.width = progress.style.width; 
             });
-            progressObserver.unobserve(entry.target); // Observe only once
+            progressObserver.unobserve(entry.target); 
         }
     });
 }, { threshold: 0.5 });
 
 document.querySelectorAll('.skills-grid').forEach(grid => {
     progressObserver.observe(grid);
+
 });
