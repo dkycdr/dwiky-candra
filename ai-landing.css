@@ -1,4 +1,3 @@
-/* Base Styles */
 * { 
     margin: 0; 
     padding: 0; 
@@ -17,8 +16,6 @@ body {
     padding: 0 20px; 
 }
 
-/* Header */
-/* Header - Updated untuk Logo Keren */
 .header {
     position: fixed;
     top: 0;
@@ -43,34 +40,29 @@ body {
 }
 
 .logo h2 {
-    /* Font baru: Orbitron untuk tampilan futuristik */
-    font-family: 'Orbitron', monospace; /* Ganti dari Poppins */
-    font-weight: 900; /* Bold untuk impact */
-    font-size: 1.8rem; /* Sedikit lebih besar agar menonjol */
+    font-family: 'Orbitron', monospace; 
+    font-weight: 900; 
+    font-size: 1.8rem; 
     margin: 0;
     
-    /* Gradient text untuk efek keren (ungu ke biru) */
-    background: linear-gradient(45deg, #6a0dad, #8b5cf6, #06b6d4); /* Warna tema AI */
+    background: linear-gradient(45deg, #6a0dad, #8b5cf6, #06b6d4); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     
-    /* Glow effect dengan text-shadow */
     text-shadow: 
-        0 0 10px rgba(106, 13, 173, 0.5), /* Glow ungu */
-        0 0 20px rgba(139, 92, 246, 0.3); /* Glow biru ringan */
+        0 0 10px rgba(106, 13, 173, 0.5), 
+        0 0 20px rgba(139, 92, 246, 0.3); 
     
-    /* Transisi untuk hover */
     transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .logo h2:hover {
-    /* Efek hover: Scale dan glow lebih kuat */
-    transform: scale(1.05) rotate(1deg); /* Ringan, menarik */
+    transform: scale(1.05) rotate(1deg); 
     text-shadow: 
         0 0 15px rgba(106, 13, 173, 0.7),
         0 0 30px rgba(139, 92, 246, 0.5),
-        0 0 5px rgba(6, 182, 212, 0.3); /* Tambah cyan untuk variasi */
+        0 0 5px rgba(6, 182, 212, 0.3); 
 }
 
 .nav-menu { 
@@ -99,7 +91,6 @@ body {
     transition: 0.3s; 
 }
 
-/* Hero Section */
 .hero { 
     height: 100vh; 
     display: flex; 
@@ -186,7 +177,6 @@ body {
     box-shadow: 0 10px 20px rgba(106,13,173,0.3); 
 }
 
-/* General Animations */
 @keyframes fadeInUp { 
     from { opacity: 0; transform: translateY(30px); } 
     to { opacity: 1; transform: translateY(0); } 
@@ -214,7 +204,6 @@ body {
     font-weight: 600; 
 }
 
-/* Features Section */
 .features { 
     padding: 100px 0; 
     background: rgba(26,26,46,0.5); 
@@ -248,7 +237,6 @@ body {
     opacity: 0.9; 
 }
 
-/* About Section */
 .about { 
     padding: 100px 0; 
     text-align: center; 
@@ -266,7 +254,6 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
 }
 
-/* Call to Action Section */
 .cta-section { 
     padding: 100px 0; 
     text-align: center; 
@@ -278,7 +265,6 @@ body {
     opacity: 0.9; 
 }
 
-/* Footer Section */
 .footer { 
     text-align: center; 
     padding: 2rem 0; 
@@ -299,7 +285,6 @@ body {
     color: #6a0dad; 
 }
 
-/* Particles (CSS for dots) */
 .particles::before, 
 .particles::after { 
     content: ''; 
@@ -325,7 +310,6 @@ body {
     100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; } 
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .hamburger { 
         display: flex; 
@@ -359,7 +343,7 @@ body {
         max-width: 300px;
     }
 }
-/* Email Modal Styling (Reuse dari style.css jika ada) */
+
 #emailModal .modal-content form {
     display: flex;
     flex-direction: column;
@@ -391,7 +375,6 @@ body {
 #formStatus.success { color: #4ade80; }
 #formStatus.error { color: #ef4444; }
 
-/* CTA Section - Fixed untuk Clickability */
 .cta-section { 
     padding: 100px 0; 
     text-align: center; 
@@ -403,18 +386,17 @@ body {
     opacity: 0.9; 
 }
 
-/* Pastikan tombol CTA clickable */
 .cta-button {
     padding: 15px 30px; 
     text-decoration: none; 
     border-radius: 50px; 
     font-weight: 600; 
     transition: transform 0.3s, box-shadow 0.3s; 
-    display: inline-block; /* Explicit untuk click area */
-    cursor: pointer; /* Kursor pointer saat hover */
-    pointer-events: auto; /* Pastikan tidak ada block dari animasi */
-    z-index: 10; /* Tinggi agar tidak overlap */
-    position: relative; /* Untuk efek hover */
+    display: inline-block;
+    cursor: pointer; 
+    pointer-events: auto; 
+    z-index: 10; 
+    position: relative; 
 }
 
 .cta-button.primary { 
@@ -429,20 +411,20 @@ body {
 .cta-button:hover { 
     transform: translateY(-3px); 
     box-shadow: 0 10px 20px rgba(106,13,173,0.3); 
-    text-decoration: none; /* Hindari underline saat hover */
-    color: inherit; /* Warna tetap */
+    text-decoration: none; 
+    color: inherit; 
 }
 
-/* Responsif - Pastikan di mobile clickable */
 @media (max-width: 768px) {
     .cta-button {
         padding: 12px 25px;
         font-size: 1rem;
-        margin: 5px; /* Spacing di mobile */
+        margin: 5px; 
     }
-    .hero-cta, .cta-section .cta-button { /* Jika ada di hero juga */
+    .hero-cta, .cta-section .cta-button { 
         flex-direction: column;
         align-items: center;
     }
 }
+
 
